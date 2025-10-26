@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Stitch&Fetch</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            font-family: cursive;
+            font-size: 5px;
+            background-image: url("outeamimage4.jpg");
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px 20px;
+            opacity: 0;
+            font-family: cursive;
+            font-size: 5px;
+            border-top-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            border-width: 3px;
+            border-color: #333;
+        }
+
+        .box {
+            background-color: #ffffff;
+            border: 2px solid #232020;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px #191515;
+            margin: 20px;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            transform: scale(0.8);
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+            font-style: italic;
+        }
+
+        .box p {
+            font-size: 1rem;
+            color: hsl(0, 5%, 7%);
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        /* Visible after animation */
+        .container.visible {
+            opacity: 1;
+        }
+
+        .container.visible .box {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<header style="text-align: center; padding: 20px; background-color: #5c4343; color: #fff; font-family: italic; font-size: 13px;">
+    <h1>Meet Our STITCH&FETCH Team</h1>
+</header>
+<body>
+    <!-- Team Description -->
+    <div class="container" id="teamContainer">
+        
+        <div class="box">
+            <h2>Crafting Bags with Love and Precision</h2>
+            <p>At Stitch&Fetch, every bag tells a story—one of dedication, creativity, and passion. Our team is a close-knit family of skilled artisans, designers, and innovators, united by a shared mission: to craft bags that resonate with your lifestyle and values. Each stitch, fold, and design element is thoughtfully executed to ensure that our creations are not just bags but lifelong companions.</p>
+        </div>            
+        <div class="box">
+            <h2>Timeless Craftsmanship</h2>
+            <p>We take immense pride in combining timeless craftsmanship with modern techniques. From sourcing premium-quality materials to designing functional yet elegant styles, our process is driven by a commitment to excellence. Every bag is meticulously hand-finished, ensuring the highest standards of durability and beauty. We believe that the care we put into every piece shines through in the final product, bringing joy to our customers.</p>
+        </div>    
+        <div class="box">
+            <h2>Attention to Detail</h2>
+            <p>What makes our team truly unique is the love and attention to detail that go into every stage of production. Whether it's brainstorming innovative designs, testing materials for sustainability, or assembling each component, we treat every step as an art form. It's this unwavering dedication that allows us to create bags that are not only visually stunning but also practical and meaningful.</p>
+        </div>    
+        <div class="box">
+            <h2>Philosophy of Love</h2>
+            <p>Behind every bag is a team that genuinely cares. From customer interactions to design finalization, we listen, learn, and adapt to deliver the best to you. Our philosophy is simple: crafting with love, for love. We strive to create bags that become an extension of you—a reflection of your individuality and aspirations.</p>
+        </div>    
+    </div>
+
+    <script>
+        // Make the team description boxes visible with animation on page load
+        window.onload = function () {
+            const teamContainer = document.getElementById('teamContainer');
+
+            // Show the team description boxes with a popping effect
+            teamContainer.classList.add('visible');
+        };
+    </script>
+</body>
+</html>

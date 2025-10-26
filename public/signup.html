@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Stitch&Fetch</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-image: url("brown-leather-womens-bag-laptop-notebook-autumn-bouquet-table-living-room_624178-6381.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #000000;
+        }
+
+        /* Form container styling */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-container h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        /* Form field styling */
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1.1rem;
+            border: 2px solid #000000;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: transparent;
+            color: #000000;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .form-container input:focus {
+            border-color: #4f4545;
+            outline: none;
+        }
+
+        .form-container label {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container button:hover {
+            background-color: #4f4545;
+        }
+
+        .form-container .terms {
+            font-size: 1rem;
+            color: #000000;
+            text-align: center;
+        }
+
+        .form-container .terms a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: 700;
+        }
+
+        .form-container .terms a:hover {
+            color: #4f4545;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Sign Up</h2>
+        <form action="http://localhost:3002/signup" method="POST">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to validate password matching
+        document.querySelector("form").addEventListener("submit", function(event) {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                event.preventDefault();  // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>
